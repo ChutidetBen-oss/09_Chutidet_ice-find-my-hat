@@ -28,41 +28,41 @@ move.push(board[playerRow][playerCol]);
 // Print board
 function printBoard(board) {
 	console.clear(); // call console.clear() before print each move
-	console.log(board);
+	board.forEach(row => console.log(row.join("")));
 }
 
 
-function moveRight(){
-	if (playerCol <= colLength) {
+function moveRight() {
+	if (playerCol < colLength - 1) {
 		playerCol++;
-		console.log("You move right");
+		move.push(board[playerRow][playerCol]);
 	} else {
 		console.log("Invalid move");
 	}
 }
 
-function moveLeft(){
-	if (playerCol >= 0){
+function moveLeft() {
+	if (playerCol > 0) {
 		playerCol--;
-		console.log("You move Left");
+		move.push(board[playerRow][playerCol]);
 	} else {
 		console.log("Invaid move");
 	}
 }
 
-function moveUp(){
-	if (playerRow <= 0 ){
-		playerRow++;
-		console.log("You move UP");
-	} else {
-		console.log("Invaid move");
-	}
-}
-
-function movedown(){
-	if (playerRow >= rowLength  ){
+function moveUp() {
+	if (playerRow > 0) {
 		playerRow--;
-		console.log("You move down");
+		move.push(board[playerRow][playerCol]);
+	} else {
+		console.log("Invaid move");
+	}
+}
+
+function movedown() {
+	if (playerRow < rowLength) {
+		playerRow++;
+		move.push(board[playerRow][playerCol]);
 	} else {
 		console.log("Invaid move");
 	}
@@ -74,3 +74,33 @@ function movedown(){
 printBoard(board);
 const input = prompt("Which way? (w/a/s/d): ");
 console.log(input);
+
+
+// this playing === true
+while (playing ===true ) {
+	if(move ==="HAT"){
+		console.log("You can found HAT You won !!!");
+		playing = false;
+	} else if ( move === "HOLE"){
+		console.log("You fall HOLE YOU LOSE 😭");
+		playing = false;
+	} else{
+			if (input === "w") {
+			moveUp()
+			console.log("You can move");
+		} else if (input === "s") {
+			movedown()
+			console.log("You can move");
+		} else if (input === "d") {
+			moveRight()
+			console.log("You can move");
+		} else if (input === "a") {
+			moveLeft()
+			console.log("You can move");
+		} else {
+			console.log("Game over");
+			playing = false;
+		}
+	}
+} i++ ;
+

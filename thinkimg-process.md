@@ -128,6 +128,8 @@
 5. Game Play Loop<br>
    1.เมื่อใส่ input จะมีการแจ้งเตือน และสามารถใส่ค่าซ้ำได้ จนกว่าจะเข้าเงื่อนไขการยุติของเกม
 
+![alt text](image.png)
+
 [Back to Table of Contents](#table-of-contents)
 
 ---
