@@ -106,13 +106,27 @@
 # <p style="display: flex; align-items: center; gap: 0.5em;"><span style="font-weight:bold; color: white; background-color: lightSeaGreen; padding: 0.5rem 2rem;">WRITE YOUR THINKING PROCESS BELOW.</span><span style="font-weight:bold; color: white; background-color: lightSeaGreen; padding: 0.5rem 0;">&nbsp;</span></p>
 
 <!-- Thinking Process -->
-<!-- 1. Workflow Planning -->
-<!-- 2.1. Board Functions (Hardcoded) -->
+
+1. Workflow Planning <br>
+1.หาวิธีแตก array 2 มิติ เป็น 1 มิติ <br>
+2.สร้างฟังก์ชั่น เก็บค่าหรือข้อมูลการเดิน <br>
+3.เขียนฟังก์ชัั่น การเดิน <br>
+4.ลองเทสระบบ
+2.1. Board Functions (Hardcoded)<br>
+หาวิธีแตกบอร์ด อาร์เรย์
 <!-- 2.2. Board Functions (Generated) -->
-<!-- 3. Input Functions -->
-<!-- 4. Movement Functions -->
-<!-- 5. Game Rule Functions -->
-<!-- 6. Game Play Loop -->
+2. Input Functions<br>
+   1.ฟังก์ชั่นสร้างบอร์ด <br>
+   2.ฟังก์ชั่นการเดิน ทั้ง 4 ทิศทาง <br>
+3. Movement Functions<br>
+   ฟังก์ชั่นการเดิน <br>
+4. Game Rule Functions <br>
+   1.เมื่อตกหลุม แพ้ <br>
+   2.เมื่อชนกำแพง แจ้งเตือน <br>
+   3.เมื่อออกนอกพื้นที่อาร์เรย์ แพ้ <br>
+   4.เมื่อเจอหมวก ชนะ <br>
+5. Game Play Loop<br>
+   1.เมื่อใส่ input จะมีการแจ้งเตือน และสามารถใส่ค่าซ้ำได้ จนกว่าจะเข้าเงื่อนไขการยุติของเกม
 
 [Back to Table of Contents](#table-of-contents)
 
