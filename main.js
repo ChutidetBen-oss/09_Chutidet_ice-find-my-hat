@@ -29,11 +29,14 @@ move.push(board[playerRow][playerCol]);
 function printBoard(board) {
 	console.clear(); // call console.clear() before print each move
 	board.forEach(row => console.log(row.join("")));
+	for ( let row of board){
+		console.log(row(""))
+	}
 }
 
 
 function moveRight() {
-	if (playerCol < colLength - 1) {
+	if (playerCol < colLength ) {
 		playerCol++;
 		move.push(board[playerRow][playerCol]);
 	} else {
@@ -59,7 +62,7 @@ function moveUp() {
 	}
 }
 
-function movedown() {
+function moveDown() {
 	if (playerRow < rowLength) {
 		playerRow++;
 		move.push(board[playerRow][playerCol]);
@@ -74,33 +77,20 @@ function movedown() {
 printBoard(board);
 const input = prompt("Which way? (w/a/s/d): ");
 console.log(input);
+console.log(move);
 
-
-// this playing === true
-while (playing ===true ) {
-	if(move ==="HAT"){
-		console.log("You can found HAT You won !!!");
+while (playing){
+	if (move === EMPTY){
+		console.log("You can walk");
+		playing = true;
+	} else if (move === HOLE){
+		console.log("GAME OVER you falling THE HOLE");
 		playing = false;
-	} else if ( move === "HOLE"){
-		console.log("You fall HOLE YOU LOSE 😭");
+	} else if ( move === HAT ){
+		console.log("YOU WON");
 		playing = false;
-	} else{
-			if (input === "w") {
-			moveUp()
-			console.log("You can move");
-		} else if (input === "s") {
-			movedown()
-			console.log("You can move");
-		} else if (input === "d") {
-			moveRight()
-			console.log("You can move");
-		} else if (input === "a") {
-			moveLeft()
-			console.log("You can move");
-		} else {
-			console.log("Game over");
-			playing = false;
-		}
+	} else {
+		console.log("You lose");
+		playing = false;
 	}
-} i++ ;
-
+};
